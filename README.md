@@ -1,6 +1,6 @@
 # Projeto: Remake de site/app web
 
-![.](https://github.com/elc1090/project1-2024a-anthony-c-silva/blob/main/screenshot.png))
+![.](https://github.com/elc1090/project1-2024a-anthony-c-silva/blob/main/screenshot.png)
 
 
 Acesso: https://elc1090.github.io/project1-2024a-anthony-c-silva/
