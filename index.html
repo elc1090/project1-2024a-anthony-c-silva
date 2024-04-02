@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+    
+    <title>Tabalho de Graduação</title>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light styleNav">
+        <div class="container-fluid ">
+          <a class="navbar-brande">Client Side Avalia TCC</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="navbar-link dropdown-toggle" href="#" id="outrosApps" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Outros Apps
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="https://andreainfufsm.github.io/avaliatcc/andamentocc/">Andamento TCC</a></li>
+                  <li><a class="dropdown-item" href="#">Final SI</a></li>
+                  <li><a class="dropdown-item" href="https://andreainfufsm.github.io/avaliatcc/atasi/">Ata SI</a></li>
+                  <li><a class="dropdown-item" href="https://andreainfufsm.github.io/avaliatcc/finalcc/">Final CC</a></li>
+                  <li><a class="dropdown-item" href="https://andreainfufsm.github.io/avaliatcc/atacc/">Ata CC</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <form>
+        <div class="container">
+            <div>
+                <h1 class="display-6 text-center styleText ">Critérios de avaliação do trabalho de graduação</h1>
+            </div>
+            <div class="mb-3">
+                <label for="nomeAluno" class="form-label">Nome do Aluno:</label>
+                <input type="text" class="form-control" id="nomeAluno" onblur="verifiNome(this)">
+            </div>
+            <div class="mb-3">
+                <label for="nomeAvaliador" class="form-label">Nome do Avaliador(a):</label>
+                <input type="text" class="form-control" id="nomeAvaliador" onblur="verifiNome(this)">
+            </div>
+            <div class="mb-3">
+                <label>Qual semestre do ano ?</label>
+                <select name=" semestre" class="form-select" id="semestre">
+                    <option value="1° Semestre">1° semestre</option>
+                    <option value="2° Semestre">2° semestre</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="data" class="form-label">Data:</label>
+                <input type="date" class="form-control" id="data" onblur="verifiData(this)">
+            </div>
+            <div class="mb-3">
+                <label for="hora" class="form-label">Hora:</label>
+                <input type="time" class="form-control" id="hora">
+            </div>
+        </div>
+    </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <h2 class="display-6 text-center styleText">Apresentação</h2>
+                </div>
+                <table class="table-bordered table table-striped">
+                    <thead>
+                        <tr>
+                            <td>Conteúdo da Apresentação</th>
+                            <td>Nota</th>
+                            <td>
+                            <input type="text" class="form-control nota-input" placeholder="Máx 1,0" id="conteudoApresentacao" onblur="verifiValorMax(this)">
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Domínio dos Recursos Didáticos</th>
+                            <td>Nota</th>
+                            <td>
+                            <input type="text" class="form-control nota-input" placeholder="Máx 1,0" id="dominiosDidaticos" onblur="verifiValorMax(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Utilização do Tempo e Poder de Síntese</th>
+                            <td>Nota</th>
+                            <td>
+                            <input type="text" class="form-control nota-input" placeholder="Máx 1,0" id="poderSintase" onblur="verifiValorMax(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-danger">SUB-TOTAL (até 3,0)</td>
+                            <td>Nota</td>
+                            <td><input type="text" class="form-control" placeholder="Resultado" id="subTotal3" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <h2 class="display-6 text-center styleText">Conteúdo do relatório escrito</h2>
+                </div>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <td>Estrutura do Trabalho</td>
+                            <td>Nota</td>
+                            <td>
+                                <input type="text" class="form-control nota-input" placeholder="Máx 1,0" id="estrutura" onblur="verifiValorMax(this)">
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Relevância, Originalidade e Qualidade do Conteúdo do Texto</td>
+                            <td>Nota</td>
+                            <td>
+                                <input type="text" class="form-control nota-input" placeholder="Máx 3,0" id="relOriQual" onblur="verifiValorMax3(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Grau de Conhecimento Demonstrado no Trabalho Escrito</td>
+                            <td>Nota</td>
+                            <td>
+                                <input type="text" class="form-control nota-input" placeholder="Máx 2,0" id="conhecimento" onblur="verifiValorMax2(this)"> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Adequação da Bibliografia Apresentada</td>
+                            <td>Nota</td>
+                            <td>
+                                <input type="text" class="form-control nota-input" placeholder="Máx 1,0" id="adequacao" onblur="verifiValorMax(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-danger">SUB-TOTAL (até 7,0)</td>
+                            <td>Nota</td>
+                            <td><input type="text" class="form-control" placeholder="Resultado" id="subTotal7" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="text-danger">TOTAL (até 10,0)</td>
+                            <td>Nota</td>
+                            <td><input type="text" class="form-control" placeholder="Resultado" id="total" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            <div>
+                <label class="form-check-label" for="flexRadioDefault1">O aluno deverá realizar alterações no Relatório Escrito?</label><br>
+                <input class="form-check-input" type="radio" name="alterar" id="sim"  value="Sim">
+                <label class="form-check-label" for="flexRadioDefault1">Sim</label><br>
+                <input class="form-check-input" type="radio" name="alterar" id="nao" value="Não">
+                <label class="form-check-label" for="flexRadioDefault2">Não</label>
+            </div>    
+    </div>
+    <div class="container">
+        <p><strong>Observação:</strong></p>
+          <label for="data">1 - Data Final para entregar a cópia definitiva do Trabalho de Graduação:</label>
+          <input type="date" class="form-control" id="dataFim" onblur="verifiData(this)">
+          <p><strong>2 - Caso a versão definitiva do Relatório Escrito não seja entregue no prazo, o aluno será considerado REPROVADO na disciplina.</strong></p>
+    </div>
+    <div class="container text-center">
+        <p class="display-6 styleText">Assinatura do Professor.</p>
+        <div class="canvas-container">
+            <canvas id="assinaturaCanvas"></canvas>
+        </div>
+        <div class="mt-3">
+            <button class="btn btn-danger" onclick="limparAssinatura()">Limpar</button>
+            <button class="btn btn-primary" type="button" id="generatePdfBtn">Gerar PDF</button>
+            <button class="btn btn-primary" type="button" id="gerarLink">Gerar link de compartilhamento</button>
+        </div>
+    </div>
+ 
+       
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="geraLink.js"></script>
+    <script src="calculaNotas.js"></script>
+    <script src="geraPdf.js"></script>
+    <script src="assinatura.js"></script>
+    <script src="calculaData.js"></script>
+    <script src="verificaNomes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
