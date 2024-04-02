@@ -7,8 +7,7 @@ Acesso: https://elc1090.github.io/project1-2024a-anthony-c-silva/
 
 
 #### Desenvolvedor(a)
-Anthony Carlos Da Silva 
-Ciência Da Computação
+Anthony Carlos Da Silva-Ciência Da Computação
 
 #### Site/app escolhido
 
