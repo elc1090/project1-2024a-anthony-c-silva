@@ -15,7 +15,7 @@ Anthony Carlos Da Silva - Ciência Da Computação
 https://andreainfufsm.github.io/avaliatcc/finalsi/
 
 ##### Descrição
-O site é constituido por um formulario com informações para serem preenchidas sobre TCC de alunos dos cursos de CC e SI, depois ded preenchido e assinado pode ser gerado um pdf ou um link de compartilhamento.
+O site é constituido por um formulario com informações para serem preenchidas sobre a avaliação de TCC de alunos dos cursos de CC e SI, depois de preenchido e assinado pode ser gerado um pdf ou um link de compartilhamento.
 
 #### Desenvolvimento
 
