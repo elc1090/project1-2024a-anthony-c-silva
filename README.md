@@ -1,9 +1,9 @@
 # Projeto: Remake de site/app web
 
-![Substitua a imagem ao lado por um screenshot do seu projeto](https://mdswanson.com/static/chops-ux-step-4.png "Screenshot do projeto")
+![.]([https://mdswanson.com/static/chops-ux-step-4.png "Screenshot do projeto"](https://github.com/elc1090/project1-2024a-anthony-c-silva/blob/main/screenshot.png))
 
 
-Acesso: Substitua este texto pela URL para acesso ao site publicado
+Acesso: https://elc1090.github.io/project1-2024a-anthony-c-silva/
 
 
 #### Desenvolvedor(a)
