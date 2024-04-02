@@ -27,7 +27,8 @@ Meu objetivo no RAMAKE foi melhorar as validações dos campos a serem preenchid
 - HTML
 - CSS
 - JavaScript
-- Bootstrap 5 
+- Bootstrap 5
+- JsPDF
 
 
 #### Ambiente de desenvolvimento
